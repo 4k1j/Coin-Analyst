@@ -1,0 +1,5 @@
+.idea
+.csv
+__pycache__/
+*.egg-info
+config/config.yaml
