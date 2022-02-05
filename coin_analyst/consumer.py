@@ -28,8 +28,8 @@ class CandleConsumer(abc.ABC):
             if type(candles) == str:
                 candles = json.load(message.value)
 
-            self.exploit_candles(candles)
+            self.ingest_candles(candles)
 
     @abc.abstractmethod
-    def exploit_candles(self, candles: List[dict]):
+    def ingest_candles(self, candles: List[dict]):
         raise NotImplementedError
