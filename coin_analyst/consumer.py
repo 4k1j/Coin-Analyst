@@ -9,7 +9,7 @@ from kafka import KafkaConsumer
 class CandleConsumer(abc.ABC):
     def __init__(self, algorithm_name, broker_host, env="dev"):
         self.env = env
-        self.topic = f"coin-bot.coin-analyst.{self.env}.{algorithm_name}"
+        self.topic = f"coin-bot.coin-analyst.{self.env}.{algorithm_name}.candles"
         self.consumer = KafkaConsumer(
             self.topic,
             bootstrap_servers=[f"{broker_host}:9092"],
